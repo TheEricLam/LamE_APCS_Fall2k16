@@ -7,8 +7,6 @@
  *
  */
 public class Calculate {
-	
-	
 	public static int square(int number){
 		return(number * number);
 	}
@@ -35,19 +33,6 @@ public class Calculate {
 	public static double toRadians(double num){
 		double x = 3.14159/180;
 		return(num * x);
-	}
-	
-	public static double discriminant(double a,double b, double c){
-		double x = b * b;
-		double y = a * c;
-		double z = 4 * y;
-		return(x - z);
-	}
-	
-	public static int toImproperFrac(int a, int b, int c){
-		int x = c * a;
-		int y = x + b;
-		return(y  c);
 	}
 }
 

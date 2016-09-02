@@ -44,10 +44,59 @@ public class Calculate {
 		return(x - z);
 	}
 	
-	public static int toImproperFrac(int a, int b, int c){
+	public static String toImproperFrac(int a, int b, int c){
 		int x = c * a;
 		int y = x + b;
-		return(y  c);
+		String str = y + "/" + c;
+		return str;
 	}
-}
+	
+	public static String toMixedNum(int a, int b){
+		int x = a / b;
+		int y = a % b;
+		String str = x + "_" + y + "/" + b;
+		return str;	
+	}
+	
+	public static String foil(int a, int b, int c, int d, String e){
+		int x = a * c; // n^2
+		int y = a * d; // n
+		int z = b * c; // n
+		int j = b * d;
+		int i = y + z; // adding commons
+		String str = "(" + x + e + "^2)" + " + " + "("+ i + e + ")" + " + " + "(" + j + ")";
+		return str;		
+	}
+	
+	public static boolean isDivisibleBy(int a, int b){
+		if(a % b == 0){
+			return true;
+		}else{
+			return false;
+		}
+	}
+	
+	public static double absValue(double a){
+		double x  = a - 0;
+		if(x > 0){
+			return x;
+		}else{
+			return 0 - a;
+		}
+	}
+	
+	public static int max(int a, int b){
+		if(a > b){
+			return a;
+		}else{
+			return b;
+		}
+	}
+	
+	public static double max(int a, int b, int c){
+		if(a > b && a > c){
+			return a;
+		}
+	}
+} 
 

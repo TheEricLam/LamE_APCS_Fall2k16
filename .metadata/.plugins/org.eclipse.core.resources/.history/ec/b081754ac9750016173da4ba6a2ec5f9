@@ -1,0 +1,12 @@
+
+public class dtesd {
+
+	public static void main(String[] args) {
+		int num = 4;
+		for(int count = 1; count <= num ; count ++ ){
+			System.out.println(num);
+			num = num /2;
+		}
+	}
+
+}

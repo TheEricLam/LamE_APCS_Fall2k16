@@ -1,0 +1,12 @@
+
+public class dtesd {
+
+	public static void main(String[] args) {
+		for(int count = 1; count <= 3 ; count ++ ){
+			System.out.println("How many lines");
+			System.out.println("Are printed!");
+			
+		}
+	}
+
+}

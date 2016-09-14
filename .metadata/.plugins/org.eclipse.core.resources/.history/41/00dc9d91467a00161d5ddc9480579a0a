@@ -93,10 +93,21 @@ public class Calculate {
 		}
 	}
 	
-	public static double max(int a, int b, int c){
+	public static double max(double a, double b, double c){
 		if(a > b && a > c){
 			return a;
 		}
+		if(b > a && b > c){
+			return b;
+		}
+		if(c > a && c > b){
+			return c;
+		}
 	}
+	
+	public static int min(int a, int b){
+		
+	}
+	 
 } 
 

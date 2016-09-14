@@ -103,11 +103,22 @@ public class Calculate {
 		if(c > a && c > b){
 			return c;
 		}
+		return(2.3);
 	}
 	
 	public static int min(int a, int b){
+		if( a < b){
+			return a;
+		}
+		if(b < a){
+			return b;
+		}
+		return(2);
 		
 	}
-	 
+	
+	public static double round2(double a){
+		double x = 
+	}
 } 
 

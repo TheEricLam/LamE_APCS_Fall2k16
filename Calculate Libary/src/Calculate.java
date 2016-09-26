@@ -4,7 +4,7 @@
 
 /**
  * @author Eric Lam
- *
+ *	Version 1.7 09/24/16
  */
 public class Calculate {
 	
@@ -117,8 +117,91 @@ public class Calculate {
 		
 	}
 	
-	public static double round2(double a){
-		double x = 
+	public static double round2(double num){
+		num = num * 100;
+		num += .5;
+		
+		return(num / 100);
 	}
+	
+	public static double exponent(int base, double power){
+		double answer = 1.0;
+				if(power == 0){
+					return (1);
+				}
+				for(int i = 1; i <= power; i++){
+					answer *= base;
+				}
+				return(answer);
+	}
+	public static int factorial(int x){
+		int answer = 1;
+		if(x == 0){
+			return(1);
+		}
+		for(int i = 1; i <= x; i++){
+			answer *=i;
+		}
+		return answer;
+	}
+	public static boolean isPrime(int num){
+		boolean test;
+		for(int i = num - 1; i > 1; i--){
+			test = Calculate.isDivisibleBy(num, i);
+			if(test == true){
+				return(false);
+			}
+		}
+	}
+	
+	public static int gcf(int a, int b){
+		int gcf = 1;
+		for(int i=1; i<= a; i++){
+			if(isDivisibleBy(a,i) && isDivisibleBy(b, i)){
+				gcf =1;
+			}
+		}
+	}
+	public static double sqrt(double num){
+		for(double i= 0.1; i <= num ; i += 0.1){
+			double mutliply = i * i;
+			if(Calculate.absValue(mutliply - num) <= 0.1){
+				return Calculate.round2(i);
+			}
+		}
+	}
+
+	public static double quadForm(double a, double b, double c){
+		
+	
+
+     double discriminant = b * b - 4 * a * c;
+
+     if (discriminant > 0){
+
+          
+
+         System.out.println("The equation has two real roots ");
+     }
+
+
+     if (discriminant == 0){
+         System.out.println("The equation has one root " +r1);
+
+       
+     }
+
+     if (discriminant < 0){
+         System.out.println("The equation has no real root");
+
+     }
+
+      
+      
+ }
+
+}
+	
+
 } 
 

@@ -169,36 +169,39 @@ public class Calculate {
 				return Calculate.round2(i);
 			}
 		}
-		return(2.0);
 	}
 
-	public static String quadForm(double a, double b, double c){	
+	public static double quadForm(double a, double b, double c){
+		
 	
-	double bMinus = -b - (Calculate.sqrt(Calculate.discriminant(a, b, c)));
-	double bPlus = -b + (Calculate.sqrt(Calculate.discriminant(a, b, c)));
-	double bottomPart = 2 * a;
-	
-	double totalMinus = bMinus / bottomPart;
-	double totalPlus = bPlus / bottomPart; 
-	
-	if(totalMinus == totalPlus){
-		String answerOne = ("\"" + totalMinus + "\"" );
-		return(answerOne);
-	}else if(totalMinus < 0 && totalPlus < 0){
-		System.out.println("\"no real roots\"");
-		return
-	}else if(!(totalMinus==totalPlus)){
-		String answerTwo = ("\"" + totalMinus + " and " + totalPlus + "\"");
-		return(answerTwo);
-	
-	return("hi");
 
-     
+     double discriminant = b * b - 4 * a * c;
+
+     if (discriminant > 0){
+
+          
+
+         System.out.println("The equation has two real roots ");
+     }
+
+
+     if (discriminant == 0){
+         System.out.println("The equation has one root " +r1);
+
+       
+     }
+
+     if (discriminant < 0){
+         System.out.println("The equation has no real root");
+
+     }
+
+      
       
  }
 
-
-
+}
+	
 
 } 
 

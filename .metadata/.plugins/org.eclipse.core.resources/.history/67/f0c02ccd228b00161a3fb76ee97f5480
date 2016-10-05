@@ -186,7 +186,6 @@ public class Calculate {
 		return(answerOne);
 	}else if(totalMinus < 0 && totalPlus < 0){
 		System.out.println("\"no real roots\"");
-		return
 	}else if(!(totalMinus==totalPlus)){
 		String answerTwo = ("\"" + totalMinus + " and " + totalPlus + "\"");
 		return(answerTwo);

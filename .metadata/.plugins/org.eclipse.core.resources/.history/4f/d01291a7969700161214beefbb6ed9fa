@@ -185,20 +185,20 @@ public class Calculate {
 		String answerOne = ("\"" + totalMinus + "\"" );
 		return(answerOne);
 	}else if(totalMinus < 0 && totalPlus < 0){
-		String noRoots = ("\"no real roots\"");
-		return(noRoots);
+		System.out.println("\"no real roots\"");
+		return
 	}else if(!(totalMinus==totalPlus)){
 		String answerTwo = ("\"" + totalMinus + " and " + totalPlus + "\"");
 		return(answerTwo);
 	
 	return("hi");
-	}
+
      
       
- 
+ }
 
 
 
-}
 
+} 
 

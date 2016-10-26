@@ -7,10 +7,7 @@ public class Split
 		String s = "applespineapplesbreadlettustomatobaconmayohambreadcheese";
 		String [] parts = s.split("bread");
 		
-	
-		if(!(parts[0]== "bread")){
-			System.out.println("This is not a sandwitch");
-		}
+		System.out.print(parts[0]);
 	
 		//String.split();
 		//It's a method that acts on a string, <StringName>.split(<String sp>);

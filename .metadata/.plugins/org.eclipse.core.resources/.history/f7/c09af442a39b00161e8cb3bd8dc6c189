@@ -4,14 +4,6 @@ public class Split
 
 	public static void main(String[] args) 
 	{
-		String s = "applespineapplesbreadlettustomatobaconmayohambreadcheese";
-		String [] parts = s.split("bread");
-		
-	
-		if(!(parts[0]== "bread")){
-			System.out.println("This is not a sandwitch");
-		}
-	
 		//String.split();
 		//It's a method that acts on a string, <StringName>.split(<String sp>);
 		//Where sp is the string where the string splits
@@ -30,7 +22,7 @@ public class Split
 		 * What if it's a fancy sandwich with multiple pieces of bread?
 		*/
 		
-	/*	public static String Split(){
+	/* public static String Split(){
 			String string = "Hello-there";
 			String [] parts = string.split("-");
 			String part1 = parts[0];
@@ -47,7 +39,7 @@ public class Split
 			String part3 = parts[2];
 			System.out.println(part1 + " "+ part2 + " "+ part3);
 		}
-	
+	*/
 		System.out.println(split("applespineapplesbreadlettustomatobaconmayohambreadcheese"));
 		//Your task pt 2:
 		/*Write a method that take in a string like "apples pineapples bread lettus tomato bacon mayo ham bread cheese" describing a sandwich

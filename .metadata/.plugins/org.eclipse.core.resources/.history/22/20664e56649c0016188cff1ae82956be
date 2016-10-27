@@ -11,7 +11,7 @@ public class Split
 		//if(!(parts[0]== "bread")){
 		//	System.out.println("This is not a sandwitch");
 		//}
-		if(s.length() == 2){
+		if(s.length()==2){
 			System.out.println("bread"+parts[1]+"bread");
 		}
 	

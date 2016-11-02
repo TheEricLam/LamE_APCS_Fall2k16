@@ -15,7 +15,7 @@ public class Magpie2 {
 		String response = "";
 		if (statement.indexOf("no") >= 0) {
 			response = "Whats the matter??";
-		}else if(statement.indexOf("Hellow") >= 0){
+		}else if(statement.indexOf("Hi") >= 0){
 			response = "Hello, how are you?";
 		}else if(statement.indexOf("Good") >= 0){
 			response = "How good?";

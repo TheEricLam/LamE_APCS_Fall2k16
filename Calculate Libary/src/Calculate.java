@@ -162,15 +162,17 @@ public class Calculate {
 				return(false);
 			}
 		}
+		return(true);
 	}
 	
 	public static int gcf(int a, int b){
-		int gcf = 1;
+		int gfc = 1;
 		for(int i=1; i<= a; i++){
 			if(isDivisibleBy(a,i) && isDivisibleBy(b, i)){
-				gcf =1;
+				gfc =1;
 			}
 		}
+		return(gfc);
 	}
 	public static double sqrt(double num){
 		for(double i= 0.1; i <= num ; i += 0.1){
@@ -183,32 +185,25 @@ public class Calculate {
 	}
 
 	public static String quadForm(double a, double b, double c){	
+		double bMinus = -b - (Calculate.sqrt(Calculate.discriminant(a, b, c)));
+		double bPlus = -b + (Calculate.sqrt(Calculate.discriminant(a, b, c)));
+		double bottomPart = 2 * a;
 	
-	double bMinus = -b - (Calculate.sqrt(Calculate.discriminant(a, b, c)));
-	double bPlus = -b + (Calculate.sqrt(Calculate.discriminant(a, b, c)));
-	double bottomPart = 2 * a;
+		double totalMinus = bMinus / bottomPart;
+		double totalPlus = bPlus / bottomPart; 
 	
-	double totalMinus = bMinus / bottomPart;
-	double totalPlus = bPlus / bottomPart; 
-	
-	if(totalMinus == totalPlus){
-		String answerOne = ("\"" + totalMinus + "\"" );
-		return(answerOne);
-	}else if(totalMinus < 0 && totalPlus < 0){
-		String noRoots = ("\"no real roots\"");
-		return(noRoots);
-	}else if(!(totalMinus==totalPlus)){
-		String answerTwo = ("\"" + totalMinus + " and " + totalPlus + "\"");
-		return(answerTwo);
-	
-	return("hi");
+		if(totalMinus == totalPlus){
+			String answerOne = ("\"" + totalMinus + "\"" );
+			return(answerOne);
+		}else if(totalMinus < 0 && totalPlus < 0){
+			String noRoots = ("\"no real roots\"");
+			return(noRoots);
+		}else if(!(totalMinus==totalPlus)){
+			String answerTwo = ("\"" + totalMinus + " and " + totalPlus + "\"");
+			return(answerTwo);
+		}
+		return("hi");
 	}
-     
-      
- 
-
-
-
 }
 
 

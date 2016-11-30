@@ -13,8 +13,8 @@ INDEX VERSION 1.129+/Users/Eric_Lam/Desktop/LamE_APCS_Fall2k16_OCT25/.metadata/.
 4013539419.index
 3967931593.index
 1067258947.index
-1969767409.index
 521061135.index
+1969767409.index
 2635462636.index
 1178485918.index
 2363563081.index
@@ -26,7 +26,7 @@ INDEX VERSION 1.129+/Users/Eric_Lam/Desktop/LamE_APCS_Fall2k16_OCT25/.metadata/.
 3242966019.index
 4238018145.index
 4046345288.index
-3670248649.index
 436574857.index
+3670248649.index
 751203406.index
 2867016645.index

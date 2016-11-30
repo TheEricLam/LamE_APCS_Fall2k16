@@ -3,6 +3,7 @@ package fracCalc;
 import java.util.Scanner;
 
 public class FracCalc {
+	
 
     public static void main(String[] args) 
     {
@@ -28,7 +29,7 @@ public class FracCalc {
     //        
     // The function should return the result of the fraction after it has been calculated
     //      e.g. return ==> "1_1/4"
-    public static String produceAnswer(String input)
+    public static void produceAnswer(String input)
     { 
         String[] inputArray = input.split("\\s+"); //must split from the space since it will not always be a "+" operator
         String num1 = inputArray[0]; //first operand
@@ -36,9 +37,16 @@ public class FracCalc {
         String num2 = inputArray[2]; // second operand
         //System.out.println(num2);
         //System.out.println("\n");
+        parseOperands(num1);
         
-        if(num2.indexOf("_" ) > 0){
-	        String[] wholeNumSplit = num2.split("_");
+        
+        
+    }
+
+   public static String parseOperands(String num)
+   {
+	  if(num.indexOf("_" ) > 0){
+	        String[] wholeNumSplit = num.split("_");
 	        String wholeNum = wholeNumSplit[0];
 	        String fraction = wholeNumSplit[1];
 	        
@@ -49,19 +57,18 @@ public class FracCalc {
 	        System.out.println("whole:" + wholeNum + " numerator:" + numerator + " denominator:" + denominator);
 	        System.out.println("\n");
 	        
-        }else if(num2.indexOf("/") > 0){
-        	String[] numeratorSplit = num2.split("/");
+       }else if(num.indexOf("/") > 0){
+       	String[] numeratorSplit = num.split("/");
 	        String numerator = numeratorSplit[0];
 	        String denominator = numeratorSplit[1];
 	       
 	        System.out.println("whole:0 numerator:" + numerator + " denominator:" + denominator);
 	        System.out.println("\n");
-        }else{
-        	System.out.println("whole:" + num2 +" numerator:0 denominator:0");
-        }
-        return "";
-    }
-
-    // TODO: Fill in the space below with any helper methods that you think you will need
+       }else{
+       	System.out.println("whole:" + num +" numerator:0 denominator:0");
+       }
+       return "";
+   }
+   
     
 }

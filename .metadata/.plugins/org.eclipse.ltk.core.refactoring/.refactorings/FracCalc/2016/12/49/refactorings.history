@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;operator&apos; in &apos;fracCalc.FracCalc.addSubtractFrac(...)&apos; to &apos;operators&apos;&#x0A;- Original project: &apos;FracCalc&apos;&#x0A;- Original element: &apos;fracCalc.FracCalc.addSubtractFrac(int[], int[], int[]).operator&apos;&#x0A;- Renamed element: &apos;operator&apos;&#x0A;- Update references to refactored element" description="Rename local variable &apos;operator&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;fracCalc{FracCalc.java[FracCalc~addSubtractFrac~\[I~\[I~\[I@operator!4020!4033!4026!4033!\[I!0!true" name="operators" references="true" stamp="1480732484320" version="1.0"/>
+</session>

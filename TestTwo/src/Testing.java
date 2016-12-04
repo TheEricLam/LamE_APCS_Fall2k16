@@ -1,27 +1,20 @@
-import java.util.*;
+public class Testing{
 
-public class Testing {
-	public static void main (String[] args){
-		Scanner word = new Scanner(System.in);
-		System.out.print("What is your phrase? ");
-		String phrase = word.nextLine();
-		System.out.print("How many times should I repeat it? ");
-		int times = word.nextInt();
-		for (int i = 1; i <= times; i++) {
-		    System.out.println(phrase);
-		}
-		word.close();
+	public static void main(String[] args){
+		int[] num = {5, 1, 2};
+		int[] answer = toImproperFrac(num);
+		System.out.println(answer[0] + "/" + answer[1]);
+		
 	}
-	public void processName(Scanner console) {
-	    System.out.print("Please enter your full name: ");
-	    String name = console.nextLine();
-	    String[] parts = name.split("\\s+");
-	    System.out.println("Your name in reverse order is " + parts[1] + ", " +
-	        parts[0]);
-	    
-	    console.close();
-	}
-
 	
+	public static int[] toImproperFrac(int[] arrayNum){
+		int[] newFraction = {0,0};
+		int numerator = (arrayNum[2] * arrayNum[0]) + arrayNum[1];
+		newFraction[0] = numerator;
+		newFraction[1] = arrayNum[2];
+		return newFraction;      
+	}
+		   
+		
 	
 }

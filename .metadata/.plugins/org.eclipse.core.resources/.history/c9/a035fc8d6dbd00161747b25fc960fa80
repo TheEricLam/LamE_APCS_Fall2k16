@@ -1,0 +1,85 @@
+
+public class TestingTwo {
+	public static void main(String[] args){
+		int[] num = {0,1,2};
+		int[] numTwo = {1,1,2};
+		int[] numThree = {-3,0,0};
+		int[] numFour = {1,1,2};
+		String operator = "+";
+		String operatorTwo = "-";
+		
+		int[] calc = toImproperFrac(num);         //num
+		int[] calcOne = toImproperFrac(numTwo);   //numTwo
+		int[] calcTwo = toImproperFrac(numThree); //numThree
+		int[] calcThree = toImproperFrac(numFour);//numFour
+		
+		System.out.println(calc[0] + "/" + calc[1]);
+		System.out.println(calcOne[0] + "/" + calcOne[1]);
+		System.out.println(calcTwo[0] + "/" + calcTwo[1]);
+		System.out.println(calcThree[0] + "/" + calcThree[1]);
+		
+		int[] operatorCalc = addSubtractFrac(calcOne, calcThree, operator);
+		int[] operatorCalcTwo = addSubtractFrac(calc, calcThree, operator);
+		
+		System.out.println(operatorCalc[0]);
+		System.out.println(operatorCalcTwo[0]);
+	}
+	public static int[] toImproperFrac(int[] arrayNum){
+		int[] newFraction = {0,0};
+		
+		if(arrayNum[1] == 0 || arrayNum[2] == 0){
+			newFraction[0] = arrayNum[0];
+			newFraction[1] = 1;
+			
+			return newFraction; 
+		}else if(arrayNum[0] < 0){
+			newFraction[0] = (arrayNum[2] * arrayNum[0]) - arrayNum[1]; //if the whole number is negative; subtract 
+			newFraction[1] = arrayNum[2];//inputed denominator
+			
+			return newFraction;  
+		
+			
+		}else{
+			int numerator = (arrayNum[2] * arrayNum[0]) + arrayNum[1]; //multiplies the denominator by the whole number, adds numerato
+			newFraction[0] = numerator; //new improper numerator value	
+			newFraction[1] = arrayNum[2];//inputed denominator
+			
+			return newFraction;      
+		}
+	}
+	
+	public static int[] addSubtractFrac(int[] opOne, int[] opTwo, String operator){
+		   int[] answer;
+		   int numeratorOne = opOne[0] * opTwo[1];//cross multiply 1st operand's numerator w/ 2nd operand's denominator
+		   int numeratorTwo = opOne[1] * opTwo[0];//cross multiply 1st operand's denominator w/ 2nd operand's numerator
+		   int denominator = opOne[1] * opTwo[1];
+		   
+		   
+		   int newNumerator;
+		   if(operator.equals("+")){
+			  newNumerator = numeratorOne + numeratorTwo;   
+		   }else{
+			    newNumerator = numeratorOne - numeratorTwo;
+		   }
+		   int wholeNum = newNumerator / denominator; //Calculation for the whole number
+		  
+		   
+		   int numerator = newNumerator % denominator; //Calculation for the numerator
+		   if(numerator == 0){
+			   answer = new int[1];
+			   answer[0] = wholeNum;
+			   return answer;
+		   }else{
+			   answer = new int[3];
+			   answer[0] = wholeNum;
+			   answer[1] = numerator;
+			   answer[2] = denominator;
+			   return answer;
+			   
+		   }
+		  
+		  
+	   }
+
+}
+
